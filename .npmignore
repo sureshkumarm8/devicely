@@ -1,0 +1,16 @@
+# Ignore deployment docs
+DEPLOYMENT.md
+
+# Git files
+.git/
+.gitignore
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Don't ignore dist - it's our main content!
