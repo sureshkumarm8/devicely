@@ -90,7 +90,7 @@ npm install -g devicely
 devicely start
 ```
 
-**Visit `http://localhost:3001` to enter your Command Center.**
+**Visit `https://devicely-ai.vercel.app/` to enter your Command Center.**
 
 ### 3. Configure AI (Optional)
 To enable natural language and voice commands:
