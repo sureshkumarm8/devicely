@@ -22,6 +22,8 @@ Devicely isn't just a tool; it's an **orchestrator**. It provides a unified, pro
 
 ---
 
+![Devicely Demo](DevicelyDemo.gif)
+
 ## 🌌 Glimpse of the Infinite
 
 Devicely redefines what's possible with your mobile infrastructure. By bridging the gap between human intent and device execution, you can:
