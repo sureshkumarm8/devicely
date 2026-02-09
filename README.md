@@ -22,7 +22,7 @@ Devicely isn't just a tool; it's an **orchestrator**. It provides a unified, pro
 
 ---
 
-![Devicely Demo](https://github.com/sureshkumarm8/devicely-npm/raw/main/DevicelyDemo.gif)
+![Devicely Demo](https://github.com/sureshkumarm8/Devicely/raw/main/DevicelyDemo.gif)
 
 ## 🌌 Glimpse of the Infinite
 
