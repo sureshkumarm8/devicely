@@ -2,11 +2,19 @@
 
 # 📱✨ Devicely
 
-### **Orchestrate Your Mobile World. AI-Powered. Infinitely Scalable.**
+### **Control one device, and every connected device follows in real-time - with live screen sync on the web**
 
-**The ultimate command center for mobile automation and multi-device orchestration.**
+*Ever wondered what happens when you combine device mirroring with AI-powered automation? Meet the mobile orchestration platform that curious developers are exploring.*
 
-[![NPM Version](https://img.shields.io/npm/v/devicely?style=for-the-badge&color=CB3837)](https://www.npmjs.com/package/devicely)
+### 🤔 **Intrigued? Try it yourself:**
+
+```bash
+npm install -g devicely
+devicely start
+```
+**Visit [https://devicely-ai.vercel.app/](https://devicely-ai.vercel.app/) and see what happens when devices work together.**
+
+[![NPM Version](https://img.shields.io/badge/npm-v2.2.13-CB3837?style=for-the-badge)](https://www.npmjs.com/package/devicely)
 [![License](https://img.shields.io/badge/license-Proprietary-blue?style=for-the-badge)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-iOS%20%7C%20Android-lightgrey?style=for-the-badge)](https://devicely-ai.vercel.app)
 
@@ -14,94 +22,111 @@
 
 ---
 
-### ⚡ **Automate at Scale, Not Just Execute.**
+### 🤷‍♀️ **What if mobile testing was more like conducting an orchestra?**
 
-Devicely isn't just a tool; it's an **orchestrator**. It provides a unified, professional interface to control, automate, and inspect iOS and Android devices simultaneously using **Natural Language AI** and **Voice Commands**.
+Instead of manually testing the same flow across multiple devices, what if you could:
+
+- **Speak naturally** to your devices: *"Take a screenshot"* → all devices respond
+- **Touch one screen** and watch others mirror your actions in real-time
+- **Record once**, replay everywhere - from 1 device to 100+
+- **See everything** happening across your device fleet on one web dashboard
+
+*Turns out, when devices can follow a leader and understand natural language, mobile development gets pretty interesting.*
 
 </div>
 
 ---
 
-![Devicely Demo](https://github.com/sureshkumarm8/Devicely/raw/main/DevicelyDemo.gif)
+---
 
-## 🌌 Glimpse of the Infinite
+## 🌟 **What makes this different?**
 
-Devicely redefines what's possible with your mobile infrastructure. By bridging the gap between human intent and device execution, you can:
+### 👑 **Commander Mode** - *Like screen sharing, but for device control*
+*   One device leads, others follow in real-time
+*   Touch the leader's screen → all followers mirror the action
+*   Switch leaders with a simple dropdown
+*   Watch it all happen on your web dashboard
 
-*   **🧪 Massive Parallel Testing:** Transform a 2-hour manual smoke test into a 5-minute automated broadcast across your entire device fleet.
-*   **🤖 AI-Native QA:** Move beyond brittle selectors. Use natural language to navigate apps, verify UI, and find bugs across different screen sizes autonomously.
-*   **🏢 Enterprise Device Labs:** Turn any desk or rack of physical devices into a private, web-accessible cloud lab for your entire global team.
-*   **🔄 Instant Bug Reproduction:** Record a complex bug on one device and instantly "broadcast" those exact steps to every other device to see which OS versions are affected.
-*   **🎤 Voice-Driven Automation:** Speak commands naturally and watch your entire device fleet respond in real-time.
-*   **🔀 Cross-Platform Sync:** Run the same command on iOS and Android simultaneously with platform-specific intelligence.
+### 🔄 **Live Sync** - *What if all your devices moved together?*
+*   Commands reach all devices simultaneously via WebSockets
+*   iOS and Android understand the same instructions differently (as they should)
+*   See live status updates from every connected device
+*   No waiting for one device to finish before the next starts
+
+### 📹 **Record & Replay - Zero-Code Automation**
+*   **Visual Recording:** Capture complex workflows with simple button clicks
+*   **AI-Generated Scripts:** Voice commands auto-convert to replayable recordings
+*   **Fleet Replay:** Run recorded flows on single devices or entire laboratories
+*   **Edit & Refine:** Full editor for recordings with add/remove/modify capabilities
+
+### 🤖 **AI Integration** - *Talk to your devices like a person*
+*   Say *"Open Instagram and find search"* - it just works
+*   Choose from 7 AI providers (some are free to try)
+*   Devices understand context - no hunting for element IDs
+*   Same command, different results on iOS vs Android (intelligently)
+
+### 🎤 **Voice Control** - *Because typing is so 2020*
+*   Speak naturally, pause when you're thinking (2-second detection)
+*   Chain commands: *"launch settings, scroll up, launch camera"*
+*   Watch your words turn into actions in real-time
+*   Works across as many devices as you want to connect
 
 ---
 
-## ✨ The Devicely Advantage
+## ✨ **Other things you might find useful**
 
-### 🤖 **AI-Native Interaction**
-Stop hunting for element IDs. Devicely understands your intent.
-*   **Natural Language Commands:** `"Open Instagram and find the search button"` or `"Take a screenshot on all Android devices"`.
-*   **Voice Control:** Speak commands naturally with automatic silence detection and multi-phrase support.
-*   **Context Awareness:** Automatically identifies buttons, inputs, and text across iOS and Android.
-*   **7 AI Providers:** Choose from **OpenAI** 🤖, **Google Gemini** ✨, **Anthropic Claude** 🧠, **GitHub Copilot** 🐙, **Groq** ⚡, **Cohere** 🌊, or **Mistral AI** 🌬️.
-*   **Model Selection:** Pick specific models (GPT-4 Turbo, Claude 3.5 Sonnet, Gemini 2.0 Flash, Llama 3 70B, etc.).
-*   **Smart Error Handling:** Clear, actionable error messages displayed inline with results.
+### ⚡ **Quick Actions Panel**
+*   **Type Text to Send:** Rapid text input without typing full commands
+*   **Element to Tap:** Click by name or coordinates (x,y) instantly
+*   **App ID to Launch:** Launch apps with autocomplete dropdown
+*   **History Navigation:** Arrow keys cycle through previous inputs
 
 ### 🎮 **Unified Command Center**
-A single conductor for your entire device orchestra.
-*   **Cross-Platform:** Native, low-latency support for **iOS 14+** and **Android 5+**.
-*   **Parallel Execution:** Run the same action on 5, 50, or 100+ devices simultaneously with zero overhead.
-*   **Synchronized Commands:** Execute platform-specific commands (different apps) on mixed device fleets at the exact same time.
-*   **Live Feedback:** See real-time logs, status updates, and visual confirmations via high-speed WebSockets.
-*   **API Key Management:** Secure credential storage with show/hide toggles for easy verification.
+*   **Cross-Platform:** Native support for **iOS 14+** and **Android 5+**
+*   **Massive Scale:** Control 5, 50, or 100+ devices with zero overhead
+*   **Live Feedback:** Real-time logs and visual confirmations via WebSockets
+*   **API Key Management:** Secure local storage with show/hide toggles
 
 ### 🔍 **Smart UI Inspector**
-The most practical way to explore your apps.
-*   **Visual Element Scan:** Instantly see all clickable, enabled, and visible elements.
-*   **Point-and-Click Control:** Interact with devices directly through the inspector interface.
-*   **Developer Friendly:** Export clean selectors and coordinates for your automation scripts.
+*   **Visual Element Scan:** See all clickable, enabled, visible elements instantly
+*   **Point-and-Click Control:** Direct device interaction through inspector
+*   **Developer Export:** Clean selectors and coordinates for automation scripts
 
-### 🔴 **Record & Broadcast**
-*   **Zero-Code Automation:** Record complex manual workflows (logins, checkouts, onboarding) and save them as reusable scripts.
-*   **AI-Generated Recordings:** Voice or text commands automatically converted to replayable scripts.
-*   **Fleet Replay:** Replay recorded flows on any single device or your entire laboratory at once.
-*   **Edit & Refine:** Full editor for AI-generated and manual recordings with add, remove, and modify capabilities.
+### 📷 **Screenshots Gallery & Management**
+*   **Unified Media Library:** Combined recordings and screenshots in tabbed interface
+*   **Visual Screenshot Gallery:** Thumbnail grid with device names and timestamps
+*   **Full-Screen Viewer:** Click to enlarge screenshots with dark background overlay
+*   **Quick Management:** Delete screenshots directly from gallery with one-click
+*   **Auto-Collection:** Screenshots captured via commands automatically appear in gallery
 
-### 🎤 **Voice Commands**
-*   **Hands-Free Operation:** Control your devices without touching a keyboard.
-*   **Continuous Listening:** Speak naturally with pauses - 2-second silence detection auto-stops.
-*   **Live Transcription:** See your words convert to commands in real-time.
-*   **Complex Multi-Step:** Voice commands like "launch settings scroll up launch camera go to google.com press home" work seamlessly.
+### 🌌 **The bigger picture**
+*   Transform 2-hour manual testing into 5-minute parallel runs
+*   Turn your device collection into a web-accessible lab
+*   Reproduce bugs instantly across different devices/OS versions
+*   Mix iOS and Android devices - they all speak the same language
 
 ---
 
-## 🚀 Quick Start
+## 🔍 **How it works** *(in about 60 seconds)*
 
-Get up and running in less than 60 seconds.
-
-### 1. Installation
+### **Step 1: Get it running**
 ```bash
-# Install Devicely globally via NPM
 npm install -g devicely
-```
-
-### 2. Launch
-```bash
-# Start the command center
 devicely start
 ```
 
-**Visit `https://devicely-ai.vercel.app/` to enter your Command Center.**
+### **Step 2: Connect and explore**
+1. Open [https://devicely-ai.vercel.app/](https://devicely-ai.vercel.app/)
+2. Connect your iOS/Android devices (as many as you want)
+3. Try saying: *"Take screenshot on all devices"*
+4. Watch what happens
 
-### 3. Configure AI (Optional)
-To enable natural language and voice commands:
-1. Visit Settings ⚙️ → AI Configuration
-2. Choose from **7 AI providers** with model selection
-3. Add your API key (secured locally, never transmitted)
-4. Start using AI: `"launch settings on all devices"`
+### **Step 3: Discover the AI layer** *(optional, but fun)*
+- Settings → AI Config → Choose a provider (Gemini/Groq are free)
+- Now you can talk to your devices in plain English
+- *"Launch settings, scroll down, open camera"* - just works
 
-**Free AI Options:** Gemini, Groq, and Cohere offer generous free tiers!
+**💡 Curious tip:** The more devices you connect, the more interesting it gets.
 
 ---
 
@@ -133,6 +158,13 @@ To enable natural language and voice commands:
 3. Click **Stop Recording**
 4. Save with name
 5. Replay anytime on any device(s)
+
+### Commander Mode
+1. Connect 2+ devices
+2. First device auto-becomes commander
+3. Click on commander screen to broadcast actions
+4. Use top-left dropdown on mirror to swap commander
+5. All devices stay synchronized automatically
 
 ---
 
@@ -179,7 +211,95 @@ Devicely comes with a powerful command-line interface for quick actions:
 
 ---
 
-## 🆕 Latest Features (February 2026)
+## 🆕 Latest Features (v2.2.13 - February 2026)
+
+### 🎨 **Major UI & Performance Update (v2.2.13 - Latest)**
+- **📷 Screenshots Gallery:** Complete screenshot management system with tabbed interface
+- **🎨 Apps Menu Redesign:** Beautiful gradient backgrounds and improved visual hierarchy
+- **🤖 AI Bypass Optimization:** App commands now execute instantly without AI processing
+- **⚡ Performance Boost:** Significantly faster app operations and UI responsiveness
+- **🎯 Enhanced UX:** Better z-index management, tooltips, and user feedback
+
+### 📷 **Screenshots Gallery & Management (NEW!)**
+- **Unified Media Library:** Combined Recordings and Screenshots in elegant tabbed interface
+- **Visual Gallery:** Responsive thumbnail grid (2-6 columns) with device context
+- **Full-Screen Viewer:** Click any screenshot for full-screen view with dark overlay
+- **Smart Management:** One-click delete with instant feedback and auto-refresh
+- **Device Tracking:** See which device captured each screenshot with timestamps
+- **Auto-Collection:** Screenshots from `screenshot` command automatically appear
+- **Cross-Platform:** Works seamlessly with iOS and Android screenshots
+
+### 🎨 **Apps Menu Visual Overhaul**
+- **Gradient Backgrounds:** Each section has beautiful, color-coded gradient styling:
+    - 🟢 **Quick Launch:** Green-emerald gradient with enhanced app cards
+    - 🚀 **Launch App:** Green-teal gradient for app launching controls
+    - ❌ **Kill App:** Red-pink gradient for app termination controls
+    - 📦 **Install App:** Blue-cyan gradient for app installation
+    - 🗑️ **Uninstall App:** Orange-yellow gradient (NEW dedicated section)
+    - 📱 **Installed Apps:** Purple-pink gradient for app listing
+- **Enhanced Visual Hierarchy:** Clear section separation with consistent iconography
+- **Z-Index Management:** Apps Menu now properly appears above all hints and tooltips
+- **Improved Tooltips:** Better button labeling and user guidance throughout
+
+### 🤖 **AI Processing Optimization**
+- **Smart Command Detection:** Automatic bypass for app control commands
+- **Regex Pattern Matching:** Detects `launch`, `kill`, `install`, `uninstall` commands
+- **Direct Execution:** App commands execute immediately without AI conversion
+- **Performance Gain:** Eliminated "🤖 Converting with Local Built-In AI" delays
+- **Maintained Intelligence:** Other commands still benefit from AI when enabled
+
+### ⚡ **Commander Mode App Launch Fix (v2.2.13)**
+- **Simple Detection:** Pre-tap home screen detection for smart app launches
+- **Skip Coordinate Mirroring:** No more wrong taps when launching apps from home screen
+- **Direct App Sync:** Detects launched app and immediately launches same app on followers
+- **Performance Optimized:** Reduced cache refresh overhead during app launches
+- **Smart Cache Management:** Refresh timing optimized for app launch vs regular tap scenarios
+
+### 🔧 **Intelligent Locator System Enhancements**
+- **Advanced Caching:** Smart cache invalidation and refresh strategies
+- **Performance Tuning:** Reduced cache refresh from 10s to 30s for better responsiveness
+- **Session Recovery:** Improved session handling with smart recovery mechanisms
+- **Cross-Device Sync:** Better coordinate scaling and device synchronization
+
+### 🐛 **Critical Fixes Applied**
+- **Commander Mode Errors:** Fixed "Error starting commander mode" when devices already connected
+- **Duplicate Follower Mirrors:** Resolved multiple mirror display issues
+- **Coordinate Scaling:** Fixed scaling problems between commander and follower devices
+- **Session Management:** Improved session lifecycle and error recovery
+- **AI Command Order:** Fixed command conversion and execution sequence
+
+### 🎯 **Developer Experience Improvements**
+- **Clean Code Architecture:** Improved separation of concerns and modularity
+- **Better Error Handling:** Enhanced error messages and user feedback
+- **Performance Monitoring:** Added metrics and logging for better debugging
+- **Cross-Platform Consistency:** Unified behavior across iOS and Android platforms
+
+---
+
+### 📋 **Recent Commits on Release_2.2.13 Branch**
+```
+dda75e2 🎨 MAJOR UPDATE: Apps Menu UI Fixes + Screenshots Gallery + AI Bypass
+a267fab 🚀 OPTIMIZE: Simple app launch detection and performance improvements  
+0dd3fcc Complete system update: AI fixes, intelligent locators, and comprehensive improvements
+8c437b1 Fix AI command conversion order and follower device execution
+5610575 🔧 MAJOR FIX: Duplicate follower mirrors & coordinate scaling
+```
+
+**🚀 Total Improvements:** 5 major commits with 650+ lines of enhancements including UI overhaul, performance optimizations, AI bypass implementation, screenshots gallery, and critical bug fixes.
+- **Fixed**: "Error starting commander mode" when devices are already connected
+- **Improved**: Commander mode now gracefully handles already-active sessions
+- **Enhanced**: Better error messaging and automatic session management
+- **Smart**: Auto-switches commander between devices without throwing errors
+
+### 👑 Commander Mode with Quick Swap (NEW!)
+- **Real-Time Mirroring:** Live screen mirroring of commander device with follower devices displayed in background
+- **Commander Dropdown:** Top-left dropdown on mirror screen for quick commander device changes
+- **One-Click Swap:** Select any connected device to instantly make it the new commander
+- **Visual Indicators:** Commander badge (👑) on device cards and mirror screen
+- **Auto-Synchronization:** WebSocket-based real-time updates across all components
+- **Touch Broadcasting:** Tap commander screen, all followers execute the same action
+- **Seamless Transitions:** Smooth commander swaps with automatic follower re-assignment
+- **Button Updates:** "Connect All" and "Select All" for clearer bulk operations
 
 ### 🤖 Multi-AI Provider Support
 - **7 AI Providers:** OpenAI, Gemini, Claude, Copilot, Groq, Cohere, Mistral AI
@@ -237,9 +357,25 @@ For enterprise inquiries or commercial access, contact: **devicelyai@gmail.com**
 
 <div align="center">
 
-### **Ready to Scale Your Mobile Automation?**
-[Install on NPM](https://www.npmjs.com/package/devicely) • [Visit Homepage](https://devicely-ai.vercel.app)
+---
 
-**Built with ❤️ for the next generation of Mobile Engineers.**
+---
+
+## 🤔 **Still curious?**
+
+Mobile development has always been about juggling multiple devices, hunting for the right selectors, and repeating the same tests over and over. What if there was a more interesting way?
+
+### **Give it a try:**
+
+```bash
+npm install -g devicely
+devicely start
+```
+
+[📦 NPM Package](https://www.npmjs.com/package/devicely) • [🌐 Try it live](https://devicely-ai.vercel.app) • [📧 Questions: devicelyai@gmail.com](mailto:devicelyai@gmail.com)
+
+*Built by developers who got tired of the same old mobile testing routine.*
+
+**⭐ Star this repo if you find it interesting!**
 
 </div>
