@@ -40,39 +40,13 @@ npm install -g devicely
 # Launch the engine
 devicely start
 ```
+Visit https://devicely-ai.vercel.app/ to connect your first device.
 
-Visit https://devicely-ai.vercel.app/ to connect your first device. ✨
-
----
-
-## ✨ Latest Features (v2.2.13)
-
-- **Live View Mirroring:** High-fidelity real-time screen streaming.
-- **Device Overlay for Locators:** Visual highlights for elements directly on the device mirror.
-- **Enhanced AI Accuracy:** Smarter natural language processing for complex navigation.
-- **Record & Replay:** Capture a flow once and replay it across your entire device fleet.
-
----
-
-## 📟 CLI Reference
-
-| Command | Description |
-|---------|-------------|
-| `devicely start` | Launch the web-based Command Center. |
-| `devicely list` | List all connected iOS and Android devices. |
-| `devicely doctor` | Verify system requirements (ADB, WDA, etc.). |
-| `devicely exec "<cmd>"` | Execute a natural language command on all devices. |
-
----
-
-## 📜 License
-
-Proprietary & Confidential. This NPM package provides the binary execution environment. For enterprise inquiries or commercial access, contact: **devicelyai@gmail.com**.
-
----
-
-<div align="center">
-
-Built by developers who got tired of the same old mobile testing routine.
-
-</div>
+✨ Latest Features (v2.2.13)
+* Live View Mirroring: High-fidelity real-time screen streaming.
+* 
+* Device Overlay for Locators: Visual highlights for elements directly on the device mirror.
+* 
+* Enhanced AI Accuracy: Smarter natural language processing for complex navigation.
+* 
+* Record & Replay: Capture a flow once and replay it across your entire device fleet.
