@@ -1,7 +1,108 @@
-Copyright (c) 2026 Suresh Kumar M
+Devicely Free Use License
+Version 1.0 - 17 October 2026
 
-All Rights Reserved.
+Copyright (c) 2026 Suresh Kumar M. All Rights Reserved.
 
-This software and associated documentation files (the "Software") are confidential and proprietary property of the owner. You may not use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and you may not permit others to do so, except with the express written permission of the owner.
+This license is an agreement between you and Suresh Kumar M ("we", "us") for
+the Devicely software, including the `devicely` npm package, the hosted web
+interface, the device scripts, the MCP server, and their documentation
+(together, the "Software"). By installing, accessing or using the Software,
+you agree to these terms.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+1. WHAT YOU MAY DO
+
+We grant you a free, non-exclusive, non-transferable, non-sublicensable,
+revocable license to install and use the Software to test, automate and
+control devices for your own purposes, including commercial purposes inside
+your organisation.
+
+2. WHAT YOU MAY NOT DO
+
+You may not, and may not allow anyone else to:
+
+  a. copy, modify, translate or create derivative works of the Software,
+     except copies needed to install and run it;
+  b. reverse engineer, decompile, disassemble, de-obfuscate or decrypt the
+     Software or any part of it, including its encrypted scripts, or attempt
+     to recover its source code, prompts, models or algorithms, except where
+     the law expressly allows this despite this restriction;
+  c. remove, bypass or interfere with any protection, obfuscation,
+     encryption, license check or usage limit;
+  d. capture, extract or reuse the instructions, prompts or other content the
+     Software sends to AI providers or other services;
+  e. use the Software, its outputs or its documentation to train, fine-tune
+     or evaluate any machine-learning or AI model, or to build a dataset for
+     that purpose;
+  f. use the Software to build, or to help build, a product or service that
+     competes with Devicely;
+  g. sell, rent, lease, lend, host, redistribute, sublicense or make the
+     Software available to third parties, including as a hosted or managed
+     service; or
+  h. remove or alter any copyright, trademark or other notice.
+
+3. OWNERSHIP
+
+The Software is licensed, not sold. We and our licensors keep all rights,
+title and interest in the Software, including all intellectual property
+rights. "Devicely" and its logos are our trademarks; this license gives you no
+right to use them.
+
+4. FREE TODAY, MAY CHANGE
+
+The Software is free under this license today. We may introduce paid plans,
+accounts, usage limits or features that require a subscription, and may
+change or discontinue any part of the Software. Versions already installed
+stay usable under the license they were released with.
+
+5. YOUR DATA
+
+The Software runs on your machine and controls your devices. It does not
+send flows, recordings, screenshots or device data to us. The local server
+sends no telemetry; the hosted web interface uses anonymous page analytics.
+When you configure an AI provider, the text of your commands and related
+instructions are sent to that provider under its own terms.
+
+6. FEEDBACK
+
+If you send us suggestions or feedback, we may use them without obligation
+to you.
+
+7. THIRD-PARTY COMPONENTS
+
+The Software includes third-party open-source components, licensed under
+their own terms as listed in the package's dependencies. Nothing in this
+license limits your rights under those terms.
+
+8. TERMINATION
+
+This license ends automatically if you break it. When it ends, you must stop
+using the Software and delete all copies. Sections 2, 3 and 9 to 12 continue
+after termination.
+
+9. NO WARRANTY
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NON-INFRINGEMENT. You are responsible for the devices you connect and the
+actions you run on them.
+
+10. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE ARE NOT LIABLE FOR ANY INDIRECT,
+INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, OR FOR LOSS OF DATA,
+DEVICES, PROFITS OR BUSINESS, ARISING FROM THE SOFTWARE. OUR TOTAL LIABILITY
+IS LIMITED TO THE AMOUNT YOU PAID FOR THE SOFTWARE IN THE TWELVE MONTHS
+BEFORE THE CLAIM (ZERO FOR THE FREE VERSION), EXCEPT WHERE THE LAW DOES NOT
+ALLOW SUCH A LIMIT.
+
+11. GOVERNING LAW
+
+This license is governed by the laws of India, and the courts of India have
+exclusive jurisdiction over any dispute arising from it.
+
+12. CHANGES TO THIS LICENSE
+
+We may update this license. The version included with a release applies to
+that release.
+
+Contact: devicelyai@gmail.com
