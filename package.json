@@ -1,0 +1,90 @@
+{
+  "name": "devicely",
+  "version": "2.4.4",
+  "description": "Devicely - One Command, All Devices. AI Powered Mobile Automation for iOS and Android",
+  "main": "lib/server.js",
+  "bin": {
+    "devicely": "./bin/devicely.js"
+  },
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "prepublishOnly": "node ../scripts/prepublish-check.js"
+  },
+  "keywords": [
+    "ios",
+    "android",
+    "automation",
+    "testing",
+    "webdriveragent",
+    "appium",
+    "uiautomator2",
+    "mobile",
+    "device-control",
+    "iphone",
+    "ipad",
+    "ui-testing",
+    "qa",
+    "testing-tools",
+    "ai",
+    "natural-language",
+    "device-pool"
+  ],
+  "author": "Suresh Kumar M <devicelyai@gmail.com>",
+  "license": "UNLICENSED",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sureshkumarm8/Devicely.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sureshkumarm8/Devicely/issues"
+  },
+  "homepage": "https://devicely-ai.vercel.app",
+  "engines": {
+    "node": ">=20.9.0",
+    "npm": ">=8.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux"
+  ],
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.71.2",
+    "@google/generative-ai": "^0.24.1",
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "axios": "^1.13.4",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "compression": "^1.8.1",
+    "consola": "^3.4.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "multer": "^2.5.0",
+    "node-fetch": "^2.7.0",
+    "open": "^8.4.2",
+    "openai": "^4.20.0",
+    "ora": "^5.4.1",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.35.5",
+    "ws": "^8.14.2",
+    "zod": "^3.25.76"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "scripts/",
+    "config/",
+    "apks/",
+    "README.md",
+    "LICENSE",
+    "NOTICE"
+  ],
+  "preferGlobal": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^5.2.1"
+  }
+}

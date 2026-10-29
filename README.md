@@ -14,7 +14,7 @@ Control a fleet of real iOS and Android devices from one screen — by hand, in 
 
 <img src="https://raw.githubusercontent.com/sureshkumarm8/Devicely/main/DevicelyDemo.gif" alt="One tap on the commander device is mirrored on every follower device" width="900">
 
-[Quick start](#quick-start) · [For QA teams](#for-qa-teams) · [Flows](#flows--no-code-automation) · [For AI agents](#for-ai-agents-mcp-server) · [CLI](#cli-reference) · [Supported platforms](#supported-platforms) · [Privacy](#privacy-and-security)
+[Quick start](#quick-start) · [First device](#first-device-in-minutes) · [For QA teams](#for-qa-teams) · [Flows](#flows--no-code-automation) · [For AI agents](#for-ai-agents-mcp-server) · [CLI](#cli-reference) · [Supported platforms](#supported-platforms) · [Privacy](#privacy-and-security)
 
 </div>
 
@@ -22,13 +22,15 @@ Control a fleet of real iOS and Android devices from one screen — by hand, in 
 
 ## Quick start
 
+> **macOS or Linux, Node.js 20.9+.** Windows isn't supported yet.
+
 ```bash
 npm install -g devicely
-devicely doctor      # checks Node, adb, Xcode and device drivers
+devicely doctor      # checks Node, adb, Xcode and iOS tools; prints the install command for anything missing
 devicely start       # starts Devicely and opens the Command Center
 ```
 
-The Command Center opens at **[devicely-ai.vercel.app](https://devicely-ai.vercel.app)**. Plug in a device over USB, or connect Android devices wirelessly with `devicely wifi connect <ip:port>`.
+The Command Center opens at **[devicely-ai.vercel.app](https://devicely-ai.vercel.app)** and talks to the server on your machine. With no devices connected, it opens on **Add your first device**, which walks you through USB or Wi-Fi setup for Android, iPhone, or a simulator/emulator.
 
 **No phone handy?** Boot an Android emulator or iOS simulator with the server:
 
@@ -38,6 +40,35 @@ devicely start --launch <name>     # starts Devicely and boots that virtual devi
 ```
 
 **Requirements:** Node.js 20.9+ on macOS or Linux. Android needs `adb` (platform-tools) on your `PATH`. iOS and iPadOS devices need a Mac with Xcode — see [iOS setup](#ios-setup).
+
+**Using an AI agent?** `devicely mcp install <client>` sets up Claude Code, Cursor, VS Code and others — see [For AI agents](#for-ai-agents-mcp-server).
+
+---
+
+## First device in minutes
+
+1. **`devicely doctor`** shows ✓ / ! / ✗ per check, grouped by platform, with the command that fixes each ✗. It exits with code 1 when nothing usable is installed (`--json` for scripts).
+2. **`devicely start`** prints the local server URL and opens the Command Center.
+3. **Follow "Add your first device"** in the browser. Its checklist updates live as you plug in, tap *Allow* or *Trust*, and the device comes online.
+
+| You have | Expect | What you need |
+| :--- | :--- | :--- |
+| Android phone or tablet | about 2 minutes | `adb`, Developer options and USB debugging on. Wi-Fi pairing needs Android 11+. [Android guide](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/ANDROID_FIRST_DEVICE.md) |
+| iPhone or iPad | about 15 minutes the first time | A Mac with Xcode, an Apple ID (a free one works), WebDriverAgent signed once in Xcode. [iOS guide](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/IOS_NEW_DEVICE_ONBOARDING_AND_WDA_SIGNING.md) |
+| No device | a few minutes once Xcode or Android Studio is installed | An iOS simulator (Xcode + WebDriverAgent, no signing) or an Android emulator (an AVD from Android Studio) |
+
+### Troubleshooting
+
+| Problem | Fix |
+| :--- | :--- |
+| Android shows **waiting for permission** (`unauthorized`) | Unlock the phone and tap **Allow** on the *Allow USB debugging?* prompt (tick *Always allow*). No prompt? Revoke USB debugging authorizations in Developer options and replug. [More](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/ANDROID_FIRST_DEVICE.md#unauthorized) |
+| No devices found | Use a data cable, not a charge-only one, and check `adb devices` / `idevice_id -l`. Run `devicely doctor` for missing tools. On Linux, `no permissions` means a udev rule is missing: [fix](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/ANDROID_FIRST_DEVICE.md#no_permission) |
+| Browser can't reach the local server | Make sure `devicely start` is still running. Open the exact link it prints. Some browsers (Brave, Safari, Chrome with local network protection) block an HTTPS site from calling `http://127.0.0.1`: allow local network access for devicely-ai.vercel.app, or try another browser. |
+| Port already in use | `devicely start -p 3002`. On a non-default port, `devicely start` prints the full link to open, for example `https://devicely-ai.vercel.app/?api=http://127.0.0.1:3002`. |
+| iPhone: WebDriverAgent signing failed | Devicely names the reason (no signing team, provisioning, Developer Mode off, untrusted developer, device locked, timeout) and links the fix in the [iOS guide](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/IOS_NEW_DEVICE_ONBOARDING_AND_WDA_SIGNING.md#connect-errors). |
+| Wi-Fi pairing fails | Guest, hotel and corporate Wi-Fi usually block device-to-device traffic and mDNS, and VPNs reroute it. Use a home network or hotspot, or pair over USB first. [More](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/ANDROID_FIRST_DEVICE.md#mdns_unavailable) |
+
+Still stuck? `devicely doctor --bundle` writes a redacted support bundle to your disk (nothing is uploaded) that you can attach to an [issue](https://github.com/sureshkumarm8/Devicely/issues). See also [Troubleshooting](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/TROUBLESHOOTING.md).
 
 ---
 
@@ -112,7 +143,8 @@ Each provider lists its current models in the settings screen. Devicely uses onl
 
 ### Devices that stay connected
 
-- **QR enrollment**: scan a code from the Command Center to pair a device over Wi-Fi — no IP addresses to type.
+- **Wireless pairing (Android 11+)**: scan a QR code from the Command Center or enter the 6-digit pairing code — no IP addresses to type. If pairing fails, Devicely checks whether your network blocks discovery (mDNS) and tells you. From a terminal: `devicely wifi pair <ip:port> <code>`, then `devicely wifi connect <ip:port>`.
+- **Clear device states**: an Android device waiting for you to tap *Allow* shows as **waiting for permission** instead of disappearing.
 - **Health monitoring** spots an unplugged cable, a reboot or a driver failure within seconds and cleans up the session.
 - **Auto-reconnect** brings a device back as soon as it reappears on USB or Wi-Fi. It's on by default; set `DEVICELY_AUTO_RECONNECT=0` to turn it off.
 - **Virtual devices**: start and stop Android emulators and iOS simulators from the UI or the CLI, next to your physical devices.
@@ -180,13 +212,20 @@ The agent calls `devicely_snapshot` and `devicely_find_elements`, taps with `dev
 | :--- | :--- |
 | `devicely start` | Start the server (binds to loopback `127.0.0.1`) and open Command Center |
 | `devicely start --host <addr>` | Bind to a specific interface (e.g. `--host 0.0.0.0` for LAN access) |
-| `devicely start -p <port> --no-browser` | Use a custom port without opening a browser (CI, headless machines) |
+| `devicely start -p <port>` | Use another port (for example when 3001 is taken). Prints the full Command Center link with `?api=` for that port |
+| `devicely start --no-browser` | Don't open a browser (CI, headless machines); open the printed link yourself |
 | `devicely start --usb-only` / `--wifi-only` | Only detect devices on USB, or only on Wi-Fi |
 | `devicely start --launch <name>` | Boot a virtual device when the server starts |
 | `devicely start --debug` | Turn on debug logging |
+| `devicely start --https --ssl-key <key.pem> --ssl-cert <cert.pem>` | Serve over HTTPS/WSS (or set `DEVICELY_HTTPS=true`, `DEVICELY_SSL_KEY`, `DEVICELY_SSL_CERT`). Refuses to start if the certificate can't be loaded. Use a locally trusted cert (e.g. `mkcert localhost 127.0.0.1`); browsers silently block self-signed ones |
 | `devicely list [--verbose]` | List connected iOS and Android devices |
 | `devicely exec "<command>" [-d <name>]` | Run a command on all devices, or on one with `-d` |
-| `devicely doctor` | Check Node, adb, Xcode and driver setup |
+| `devicely doctor` | Check Node, adb, Xcode and iOS tools, with a fix command for each failure. Exits 1 when nothing usable is installed |
+| `devicely doctor --json` | The same checks as JSON, for scripts and CI |
+| `devicely doctor --bundle` | Write a redacted support bundle to disk (nothing is uploaded) |
+| `devicely wifi pair <ip:port> <code>` | Pair an Android 11+ device using the code from *Wireless debugging › Pair device with pairing code* |
+| `devicely wifi connect <ip:port>` | Connect to a paired Android device over Wi-Fi (the address shown under *Wireless debugging*) |
+| `devicely telemetry status\|enable\|disable` | Show or change the opt-in setup diagnostics setting ([details](https://github.com/sureshkumarm8/Devicely/blob/main/docs/TELEMETRY.md)) |
 | `devicely emulators list` | List Android emulators and iOS simulators (alias: `devicely virtual`) |
 | `devicely emulators start <name> [--headless]` | Boot a virtual device |
 | `devicely emulators stop <name>` | Shut down a virtual device |
@@ -240,11 +279,19 @@ devicely exec "url https://github.com" -d "Pixel 8"
 | :--- | :--- |
 | **Host machine** | macOS and Linux, Node.js 20.9+. Windows isn't supported yet. |
 | **Android** | Phones, tablets and emulators via ADB and UIAutomator2. Wireless debugging needs Android 11+. |
-| **iOS / iPadOS** | iPhones, iPads and simulators via WebDriverAgent. Needs a Mac with Xcode. iOS 16+ also requires Developer Mode. |
+| **iOS / iPadOS** | iPhones, iPads and simulators on iOS/iPadOS 17 or later, via WebDriverAgent. Needs a Mac with Xcode. Physical devices need Developer Mode turned on. |
 
 ### iOS setup
 
-Physical iOS devices are controlled through WebDriverAgent, which must be signed with your Apple ID or developer team before it can run on a device. Run `devicely doctor` and follow the in-app setup guide; it walks you through installing the iOS tools, enabling Developer Mode and trusting the computer. Android devices and iOS simulators don't need signing.
+iPhones, iPads and simulators are controlled through **WebDriverAgent** (WDA), Appium's open-source test runner. Get it with one click in **Add your first device**, or clone it yourself into the Devicely data folder:
+
+```bash
+git clone https://github.com/appium/WebDriverAgent ~/.devicely/WebDriverAgent
+```
+
+(`$DEVICELY_DATA_DIR/WebDriverAgent` if you set `DEVICELY_DATA_DIR`; `WDA_PATH` points Devicely at a checkout anywhere else.) Simulators need nothing more.
+
+A physical device also needs WDA **signed once in Xcode** with your Apple ID. A free Apple ID works, but its signature expires after 7 days. The in-app guide walks you through trusting the computer, turning on Developer Mode and signing, and if a connect fails it names the reason (no signing team, provisioning, Developer Mode off, untrusted developer, device locked, timeout) with a link to the fix. Full walkthrough: [iOS device guide](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/IOS_NEW_DEVICE_ONBOARDING_AND_WDA_SIGNING.md). Android devices don't need signing.
 
 ---
 
@@ -254,9 +301,10 @@ Physical iOS devices are controlled through WebDriverAgent, which must be signed
 - **Loopback binding by default.** The server binds to `127.0.0.1` by default, protecting your host machine from unintended local network exposure.
 - **Origin & Host guard.** Requests to the REST API and WebSocket endpoints are guarded against untrusted Host and Origin headers, protecting against DNS rebinding and cross-origin attacks.
 - **Local AI is an option.** Use Ollama to keep prompts and screen data on your machine. With a cloud AI provider, your commands go to that provider under your own API key.
-- **API keys stay on your machine.** Configuration files containing tokens or keys are stored locally with restrictive filesystem permissions (`0600`).
+- **API keys stay on your machine.** AI keys you add in Settings are stored in `~/.devicely/.env` (or `$DEVICELY_DATA_DIR/.env`), readable only by you (`0600`). They are sent only to the AI provider you chose.
 - **Agents need a token.** MCP over HTTP and the REST API require a 32-byte Bearer token.
-- **Analytics:** the local server sends no telemetry. The hosted dashboard at [devicely-ai.vercel.app](https://devicely-ai.vercel.app) uses anonymous Vercel page analytics; it connects to your local server and doesn't send device data to Vercel.
+- **Analytics:** the local server sends no telemetry. The hosted dashboard at [devicely-ai.vercel.app](https://devicely-ai.vercel.app) uses anonymous Vercel page-view analytics and connects to your local server; device data isn't sent to Vercel.
+- **Setup diagnostics are opt-in.** The Command Center asks once whether to share anonymous setup events (for example "doctor check failed: adb missing" or "first device action succeeded"). They are fixed codes only: no serials, IP addresses, device or app names, or file paths. Nothing is sent unless you say yes, and `DO_NOT_TRACK=1` or `DEVICELY_TELEMETRY_DISABLED=1` turns it off. Check or change it with `devicely telemetry status|enable|disable`. Every event and field is listed in [TELEMETRY.md](https://github.com/sureshkumarm8/Devicely/blob/main/docs/TELEMETRY.md).
 
 ---
 

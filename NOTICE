@@ -1,0 +1,20 @@
+Devicely
+Copyright (c) Suresh Kumar M
+
+This package includes third-party software:
+
+Appium UIAutomator2 Server
+  Files: apks/appium-uiautomator2-server.apk, apks/appium-uiautomator2-server-test.apk
+  Source: https://github.com/appium/appium-uiautomator2-server
+  License: Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+  Copyright JS Foundation and other contributors, https://js.foundation
+
+  Distributed unmodified. Licensed under the Apache License, Version 2.0;
+  you may not use these files except in compliance with the License. Unless
+  required by applicable law or agreed to in writing, software distributed
+  under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+  CONDITIONS OF ANY KIND, either express or implied.
+
+WebDriverAgent (downloaded on demand, not included in this package)
+  Source: https://github.com/appium/WebDriverAgent
+  License: BSD 3-Clause
