@@ -1,6 +1,7 @@
 {
   "name": "devicely",
-  "version": "2.4.4",
+  "version": "2.4.7",
+  "mcpName": "io.github.sureshkumarm8/devicely",
   "description": "Devicely - One Command, All Devices. AI Powered Mobile Automation for iOS and Android",
   "main": "lib/server.js",
   "bin": {
@@ -78,13 +79,12 @@
     "apks/",
     "README.md",
     "LICENSE",
-    "NOTICE"
+    "NOTICE",
+    "release-manifest.json",
+    "CHANGELOG.md"
   ],
   "preferGlobal": true,
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "javascript-obfuscator": "^5.2.1"
   }
 }

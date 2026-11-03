@@ -20,7 +20,6 @@ try {
   if (!fs.existsSync(configDir)) {
     fs.mkdirSync(configDir, { recursive: true });
     console.log(chalk.green('✅ Created config directory'));
-    console.log(chalk.gray(`   ${configDir}`));
   }
 } catch (error) {
   // Silent fail - directory might already exist

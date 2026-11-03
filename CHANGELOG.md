@@ -5,6 +5,56 @@ All notable changes to Devicely will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.4.7] - 2026-11-03
+
+### Fixed
+- **Commander across platforms**: an iPhone following an Android commander (or the reverse) now finds the element by its visible label instead of a scaled position that could land on an unrelated control; a miss is reported instead of tapping blind
+- **Replay across platforms**: steps recorded on the other platform are matched by label and exact text (so "Start" can't hit "Restart"); a step with no label fails instead of guessing
+- **Honest tap results**: a tap that hit nothing, or had no session, is reported as failed instead of done; follower taps made by scaled position are shown apart from clean matches in the mirror toolbar
+- **Readable errors**: script failures are shown as one line, without colour codes or the "Use coordinates" tip
+- **Recordings by name**: replay over the API and MCP finds a recording by filename (with or without `.json`) or by its name, newest first; unknown or invalid names fail at once
+- **Commander swaps** keep the followers you excluded excluded, and the "Switching commander" spinner names the device
+- A stale WebDriverAgent session is recovered once instead of failing the step
+- Android port allocation and session handling under concurrent use
+- **MCP over HTTP** accepts more than one request (each request now gets its own stateless transport)
+- Settings and terminal reports no longer show internal storage paths
+
+### Changed
+- Releases pass a verification gate: every test, a size and contents check of the actual tarball, and an install-and-run smoke test on CI
+
+## [2.4.6] - 2026-10-31
+
+### Added
+- **Device details in a phone frame**: click a device's name to see its status, model, OS, connection, UDID/serial and IP (with copy buttons) and the WebDriverAgent port on iOS
+- **Settings › Paths**: every path Devicely uses, where it came from and whether it is valid; WebDriverAgent, Android SDK and screenshots folders can be changed or reset
+- **Shell environment import**: when started from an MCP client or desktop app, Devicely reads `WDA_PATH`, `ANDROID_HOME`, `JAVA_HOME` and missing `PATH` entries from your login shell; existing values are never overridden (`DEVICELY_NO_SHELL_ENV=1` turns it off)
+- **Resume setup** when the setup guide was closed early
+
+### Fixed
+- **MCP Commander control**: `devicely_commander` start/stop/add/remove reported success without doing anything
+- **Exact taps over MCP**: `exact: true` was dropped, so "Stop" could land on "Stopwatch"
+- **Android element centres** were off by half the element's size
+- A follower that can't find an element times out after 25 seconds instead of holding up the whole call
+- **First emulator connect** no longer fails until a reconnect
+- The Android USB setup step detects a phone plugged in during the step, or before it
+- Wi-Fi pairing warns to scan only from Wireless debugging and stops when cancelled
+- Saving the AI provider form no longer drops path settings; `devicely doctor` warns when `WDA_PATH` is not a WebDriverAgent checkout
+
+### Changed
+- USB devices, iPhones included, show a visible Wi-Fi button instead of a More menu entry
+
+## [2.4.5] - 2026-10-31
+
+### Added
+- **Listed in the MCP registry** (`npx -y devicely mcp`)
+- **Feedback**: a Feedback entry in the header and command palette, a few one-time prompts after your first successes, and a `devicely feedback` command; links are prefilled with identifiers removed
+- **Opt-in usage events** (Commander sessions, replays, MCP connections, weekly activity), documented in `docs/TELEMETRY.md`
+- [Security and privacy](docs/SECURITY_AND_PRIVACY.md) page
+
+### Fixed
+- When the UI can't reach the local server, it tells apart "not running", "blocked by the browser" and "wrong port", with a fix for each; the terminal prints a hint when no browser connects within 30 seconds
+- Android-only and iOS-only setups show as ready
+
 ## [2.4.4] - 2026-10-29
 
 ### Fixed
