@@ -12,7 +12,7 @@ Control a fleet of real iOS and Android devices from one screen — by hand, in 
 [![MCP](https://img.shields.io/badge/MCP-30%20tools-8A2BE2?style=for-the-badge)](#for-ai-agents-mcp-server)
 [![License](https://img.shields.io/badge/license-free%20%7C%20closed%20source-blue?style=for-the-badge)](#license)
 
-<img src="https://raw.githubusercontent.com/sureshkumarm8/Devicely/main/docs/assets/hero.gif" alt="Five iPhones, iPads and Androids switch to dark mode together from one Devicely screen" width="900">
+<img src="https://raw.githubusercontent.com/sureshkumarm8/Devicely/main/docs/assets/01-commander.gif" alt="Five iPhones, iPads and Androids switch to dark mode together from one Devicely screen" width="900">
 
 [▶ All demos](https://github.com/sureshkumarm8/Devicely/blob/main/docs/DEMOS.md) · [Quick start](#quick-start) · [First device](#first-device-in-minutes) · [For QA teams](#for-qa-teams) · [Flows](#flows--no-code-automation) · [For AI agents](#for-ai-agents-mcp-server) · [CLI](#cli-reference) · [Supported platforms](#supported-platforms) · [Privacy](#privacy-and-security)
 
