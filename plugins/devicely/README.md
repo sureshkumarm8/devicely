@@ -9,7 +9,7 @@ Gives Claude Code hands on your real iPhones, iPads and Androids, and on simulat
 /plugin install devicely@devicely
 ```
 
-The plugin only registers the Devicely MCP server (`npx -y devicely mcp`). The server comes from the [`devicely` npm package](https://www.npmjs.com/package/devicely) and starts the local Devicely server automatically.
+The plugin registers the Devicely MCP server (`npx -y devicely mcp`) and adds the `devicely` skill, which teaches Claude how to work with real devices: observe, act and verify every step, handle iOS and Android differences, drive several devices at once, and turn a session into a Maestro, Appium or WebdriverIO test. The server comes from the [`devicely` npm package](https://www.npmjs.com/package/devicely) and starts the local Devicely server automatically.
 
 ## Requirements
 

@@ -1,6 +1,6 @@
 {
   "name": "devicely",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Control real iOS and Android devices, simulators and emulators: read the screen, tap, type, swipe, launch apps, and mirror one action across a whole fleet. Runs locally; 30 tools.",
   "author": {
     "name": "Devicely",
