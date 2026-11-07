@@ -72,7 +72,7 @@ Boot an iOS simulator or Android emulator from Devicely and drive it next to phy
 
 Over MCP, Claude Code opens Maps on every device, searches for the Eiffel Tower and verifies the result per device. It reports the one device it couldn't verify instead of hiding it.
 
-![Claude Code searches Maps on five devices and reports per device](assets/demos/11-claude-code-mcp.gif)
+![Claude Code searches Maps on five devices and reports per device](assets/demos/11-claude-code-mcp-v2.gif)
 
 Set it up: `claude mcp add devicely -- npx -y devicely mcp`, or the plugin: `/plugin marketplace add sureshkumarm8/Devicely`. More in [For AI agents](../README.md#for-ai-agents-mcp-server).
 
