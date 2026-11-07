@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and how-to
+    url: https://github.com/sureshkumarm8/Devicely/discussions/categories/q-a
+    about: Ask how to do something with Devicely
+  - name: Show what you built
+    url: https://github.com/sureshkumarm8/Devicely/discussions/categories/show-and-tell
+    about: Share a Flow, an agent workflow, or your device setup
+  - name: Report a security vulnerability
+    url: https://github.com/sureshkumarm8/Devicely/blob/main/SECURITY.md
+    about: Please email devicelyai@gmail.com instead of opening a public issue

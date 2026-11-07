@@ -1,0 +1,31 @@
+name: Idea or feature request
+description: Suggest something that would make Devicely more useful
+title: "[Idea]: "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: Describe the job or problem, not just the feature. "I test our login flow on 6 phones every release and…"
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: How do you do it today?
+      description: Other tools, scripts, or doing it by hand.
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+  - type: dropdown
+    id: role
+    attributes:
+      label: You are mainly a…
+      options: [QA / test engineer, Mobile developer, Building with AI agents / MCP, Indie app maker, Other]
+  - type: dropdown
+    id: devices
+    attributes:
+      label: How many test devices do you use?
+      options: ["1", "2-3", "4-10", "More than 10"]

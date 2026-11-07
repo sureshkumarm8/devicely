@@ -1,0 +1,49 @@
+name: Setup help
+description: Stuck installing Devicely or connecting a device
+title: "[Setup]: "
+labels: ["setup-help"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        First try `devicely doctor`: it prints the fix for most setup problems. See also the [troubleshooting guide](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/TROUBLESHOOTING.md).
+  - type: dropdown
+    id: stuck-at
+    attributes:
+      label: Where are you stuck?
+      options:
+        - Installing (npm install / devicely doctor)
+        - Browser can't reach the local server
+        - Android device not showing / unauthorized
+        - Android Wi-Fi pairing
+        - iPhone/iPad (WebDriverAgent signing, Developer Mode, trust)
+        - Simulator / emulator
+        - MCP / AI agent setup
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: error-code
+    attributes:
+      label: Error code shown (if any)
+  - type: input
+    id: version
+    attributes:
+      label: Devicely version (`devicely --version`)
+    validations:
+      required: true
+  - type: dropdown
+    id: host-os
+    attributes:
+      label: Computer
+      options: [macOS (Apple silicon), macOS (Intel), Linux]
+  - type: textarea
+    id: details
+    attributes:
+      label: What did you try?
+      description: Please leave out serials, UDIDs, IP addresses and Apple IDs.
+  - type: textarea
+    id: doctor
+    attributes:
+      label: "`devicely doctor` output"
+      render: text

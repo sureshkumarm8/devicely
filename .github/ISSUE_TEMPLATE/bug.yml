@@ -1,0 +1,64 @@
+name: Bug report
+description: Something in Devicely doesn't work as expected
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. Please **don't include** device serials or UDIDs, IP addresses, Apple IDs, API keys, or screenshots with personal data.
+        Security problem? Email **devicelyai@gmail.com** instead of opening an issue.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. devicely start
+        2. Connect a Pixel 7 over USB
+        3. Tap ... in Commander Mode
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Devicely version
+      description: Output of `devicely --version`
+      placeholder: "2.4.4"
+    validations:
+      required: true
+  - type: dropdown
+    id: host-os
+    attributes:
+      label: Computer
+      options: [macOS (Apple silicon), macOS (Intel), Linux, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: device-platforms
+    attributes:
+      label: Devices involved
+      multiple: true
+      options: [Android phone/tablet, Android emulator, iPhone/iPad, iOS simulator]
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options: [Chrome, Brave, Safari, Firefox, Edge, Other / not relevant]
+  - type: input
+    id: error-code
+    attributes:
+      label: Error code (if Devicely showed one)
+      placeholder: "e.g. no_signing_team, mdns_unavailable"
+  - type: textarea
+    id: doctor
+    attributes:
+      label: "`devicely doctor` output (optional)"
+      description: Paste the output, or attach the redacted bundle from `devicely doctor --bundle`.
+      render: text
