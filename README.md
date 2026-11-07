@@ -163,6 +163,13 @@ devicely mcp install cursor           # also: vscode, windsurf, gemini, claude-d
 devicely mcp doctor                   # checks the backend, token and transports
 ```
 
+Or install the Claude Code plugin, from inside Claude Code:
+
+```
+/plugin marketplace add sureshkumarm8/Devicely
+/plugin install devicely@devicely
+```
+
 Or add it to Claude Code by hand:
 
 ```bash

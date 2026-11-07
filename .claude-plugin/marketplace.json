@@ -1,0 +1,18 @@
+{
+  "name": "devicely",
+  "owner": {
+    "name": "Devicely",
+    "email": "devicelyai@gmail.com"
+  },
+  "metadata": {
+    "description": "Devicely for Claude Code: control real iPhones, iPads and Androids from your agent."
+  },
+  "plugins": [
+    {
+      "name": "devicely",
+      "source": "./plugins/devicely",
+      "description": "Control real iOS and Android devices, simulators and emulators: read the screen, tap, type, swipe, launch apps, and mirror one action across a whole fleet.",
+      "category": "testing"
+    }
+  ]
+}

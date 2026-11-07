@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "devicely": {
+      "command": "npx",
+      "args": ["-y", "devicely", "mcp"]
+    }
+  }
+}
