@@ -30,6 +30,15 @@ devicely doctor      # checks Node, adb, Xcode and iOS tools; prints the install
 devicely start       # starts Devicely and opens the Command Center
 ```
 
+**Can't install globally?** On a locked-down work machine (no admin rights, global installs blocked, or install scripts turned off), run Devicely with `npx` instead. Nothing is installed globally, and every command works the same way:
+
+```bash
+npx devicely@latest doctor
+npx devicely@latest start
+```
+
+The first run downloads about 185 MB; later runs start from the npm cache. Teams can pin a version (`npx devicely@2.4.7 start`) so everyone runs the same one. If your company routes npm through a private registry (Artifactory, Nexus, Verdaccio), ask IT to allow the `devicely` package; `npx` and `npm install` both use that registry.
+
 The Command Center opens at **[devicely-ai.vercel.app](https://devicely-ai.vercel.app)** and talks to the server on your machine. With no devices connected, it opens on **Add your first device**, which walks you through USB or Wi-Fi setup for Android, iPhone, or a simulator/emulator.
 
 **No phone handy?** Boot an Android emulator or iOS simulator with the server:
@@ -64,6 +73,7 @@ devicely start --launch <name>     # starts Devicely and boots that virtual devi
 | Android shows **waiting for permission** (`unauthorized`) | Unlock the phone and tap **Allow** on the *Allow USB debugging?* prompt (tick *Always allow*). No prompt? Revoke USB debugging authorizations in Developer options and replug. [More](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/ANDROID_FIRST_DEVICE.md#unauthorized) |
 | No devices found | Use a data cable, not a charge-only one, and check `adb devices` / `idevice_id -l`. Run `devicely doctor` for missing tools. On Linux, `no permissions` means a udev rule is missing: [fix](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/ANDROID_FIRST_DEVICE.md#no_permission) |
 | Browser can't reach the local server | Make sure `devicely start` is still running and open the exact link it prints. If the page says *Devicely is running, but this page can't talk to it*, your browser is blocking an HTTPS site from calling `http://127.0.0.1`: in Chrome or Edge allow *Local network access* for devicely-ai.vercel.app in site settings, in Brave lower Shields for the site, and on Safari use Chrome, Edge or Firefox. `devicely start` also prints a hint after 30 seconds when no browser has connected. |
+| `npm install -g` fails with `EACCES` or permission denied, or is blocked at work | Use `npx devicely@latest start` (and `npx devicely@latest doctor`); it needs no global install or admin rights. Behind a private registry, ask IT to allow the `devicely` package. Don't use `sudo npm install -g`. |
 | Port already in use | `devicely start -p 3002`. On a non-default port, `devicely start` prints the full link to open, for example `https://devicely-ai.vercel.app/?api=http://127.0.0.1:3002`. |
 | iPhone: WebDriverAgent signing failed | Devicely names the reason (no signing team, provisioning, Developer Mode off, untrusted developer, device locked, timeout) and links the fix in the [iOS guide](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/IOS_NEW_DEVICE_ONBOARDING_AND_WDA_SIGNING.md#connect-errors). |
 | Wi-Fi pairing fails | Guest, hotel and corporate Wi-Fi usually block device-to-device traffic and mDNS, and VPNs reroute it. Use a home network or hotspot, or pair over USB first. [More](https://github.com/sureshkumarm8/Devicely/blob/main/docs/guides/ANDROID_FIRST_DEVICE.md#mdns_unavailable) |
