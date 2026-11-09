@@ -25,16 +25,16 @@ Control a fleet of real iOS and Android devices from one screen — by hand, in 
 | Capability | Demonstration | What it does |
 | :--- | :---: | :--- |
 | **Commander Mode** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/01-commander.gif) | Tap, swipe, or type on one leader device — every connected iPhone, iPad, and Android follows live. |
-| **Fleet Settings & Dark Mode** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/02-dark-mode.gif) | Toggle appearance, settings, and preferences across your entire fleet in one click. |
+| **AI Agents (MCP Server)** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/11-claude-code-mcp.gif) | Drive physical and virtual mobile devices directly from Claude Code, Cursor, or VS Code over MCP. |
 | **Multi-Browser Sync** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/03-browser.gif) | Navigate URLs simultaneously in Mobile Safari, Chrome, and default browsers across all resolutions. |
+| **No-Code Flows** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/09-flows.gif) | Record interactions once, replay them across every device, and export directly to Appium code. |
+| **Live Locator Inspector** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/07-hover-inspect.gif) | Hover live screen mirrors to copy accessibility IDs, resource IDs, and XPath selectors. |
+| **Fleet Settings & Dark Mode** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/02-dark-mode.gif) | Toggle appearance, settings, and preferences across your entire fleet in one click. |
 | **Plain English Voice / NLP** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/04-plain-english.gif) | Issue natural language commands (`"open settings"`, `"launch camera"`) converted into real device actions. |
+| **Virtual Device Fleet** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/10-virtual-devices.gif) | Boot and orchestrate iOS Simulators and Android Emulators side-by-side with real hardware. |
 | **Fleet App Management** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/05-apps.gif) | Batch install, launch, switch, or kill apps across iOS and Android device pools. |
 | **Dynamic Leader Swap** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/06-commander-swap.gif) | Promote any follower device to be the commander on the fly without dropping the session. |
-| **Live Locator Inspector** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/07-hover-inspect.gif) | Hover live screen mirrors to copy accessibility IDs, resource IDs, and XPath selectors. |
 | **Smart Locators** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/08-locators.gif) | Dynamic-first resilient locator strategy with automatic coordinate fallback across form factors. |
-| **No-Code Flows** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/09-flows.gif) | Record interactions once, replay them across every device, and export directly to Appium code. |
-| **Virtual Device Fleet** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/10-virtual-devices.gif) | Boot and orchestrate iOS Simulators and Android Emulators side-by-side with real hardware. |
-| **AI Agents (MCP Server)** | [▶ Demo](https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/11-claude-code-mcp.gif) | Drive physical and virtual mobile devices directly from Claude Code, Cursor, or VS Code over MCP. |
 
 > [!TIP]
 > View all 11 full-length animated demonstrations in the [🎬 Interactive Demos Gallery](https://github.com/sureshkumarm8/Devicely/blob/main/docs/DEMOS.md).
