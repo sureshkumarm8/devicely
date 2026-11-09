@@ -1,81 +1,85 @@
-# Devicely in action
+# 🎬 Devicely Feature Demos & Gallery
 
-Real iPhones, iPads and Android devices, recorded from the hosted Command Center at [devicely-ai.vercel.app](https://devicely-ai.vercel.app). Every clip is a real recording; only captions and privacy blurring were added.
-
-**Try it:** `npm install -g devicely && devicely start` (or `npx devicely@latest start`). [Quick start](../README.md#quick-start)
-
-Jump to: [Commander](#1-tap-once-every-iphone-ipad-and-android-follows) · [Plain English](#4-say-what-you-want-it-runs-everywhere) · [Apps](#5-launch-or-kill-any-app-on-every-device) · [Locators](#7-hover-any-locator-see-it-on-the-device) · [Flows](#9-record-once-replay-on-every-device) · [Virtual devices](#10-real-phones-emulators-and-simulators-one-fleet) · [AI agents (MCP)](#11-claude-code-drives-real-iphones-ipads-and-androids)
+All 11 feature demonstrations in animated GIFs. Every clip shows real devices running locally with the official Devicely app.
 
 ---
 
-## 1. Tap once. Every iPhone, iPad and Android follows.
+### 1. Commander Mode (Multi-Device Leader-Follower Mirroring)
+Control multiple iPhones, iPads, and Android devices in real-time. Tapping, typing, or swiping on the commander device dispatches proportionally scaled touches to all follower devices simultaneously.
 
-Commander mode: pick one device to lead, and every tap, swipe and keystroke is mirrored on the rest of the fleet. Real devices, no code.
-
-![One tap on the commander is mirrored on every follower](assets/demos/01-commander.gif)
-
-## 2. Dark mode on every iPhone, iPad and Android
-
-One command per platform, and five screens switch from light to dark.
-
-![Five iPhones, iPads and Androids switch to dark mode together](assets/demos/02-dark-mode.gif)
-
-## 3. Open a URL on every phone and tablet. At once.
-
-Safari and Chrome, iOS and Android, phone and tablet sizes side by side: one step for responsive and cross-browser checks.
-
-![The same web page opens on every device at once](assets/demos/03-browser.gif)
-
-## 4. Say what you want. It runs everywhere.
-
-Plain-English commands, such as "Open Clock, go to Stopwatch and start it", run on iOS and Android together.
-
-![A plain-English command runs on every device](assets/demos/04-plain-english.gif)
-
-## 5. Launch or kill any app. On every device.
-
-The Apps panel searches installed apps and launches or closes them everywhere. It also installs `.ipa` and `.apk` files.
-
-![An app launches and closes on every device](assets/demos/05-apps.gif)
-
-## 6. Choose who leads and who follows. Live.
-
-Press ⌘K to make another device the commander or leave one out, without stopping the session.
-
-![The command palette switches the commander and excludes a device](assets/demos/06-commander-swap.gif)
-
-## 7. Hover any locator. See it on the device.
-
-The Locators panel reads the commander's screen. Hover a row to highlight that element on the device.
-
-![Hovering a locator highlights the element on the device](assets/demos/07-hover-inspect.gif)
-
-## 8. Point at any element. Get test code.
-
-Ready-to-paste locators for Appium (Java and Python) and WebdriverIO.
-
-![An element becomes Appium and WebdriverIO locator code](assets/demos/08-locators.gif)
-
-## 9. Record once. Replay on every device.
-
-Save what you did as a Flow and replay it on any devices, iOS and Android, with no code. Flows also export as Maestro, Appium or WebdriverIO tests.
-
-![A recorded Flow replays on every device](assets/demos/09-flows.gif)
-
-## 10. Real phones, emulators and simulators. One fleet.
-
-Boot an iOS simulator or Android emulator from Devicely and drive it next to physical devices.
-
-![A simulator joins the fleet next to physical devices](assets/demos/10-virtual-devices.gif)
-
-## 11. Claude Code drives real iPhones, iPads and Androids
-
-Over MCP, Claude Code opens Maps on every device, searches for the Eiffel Tower and verifies the result per device. It reports the one device it couldn't verify instead of hiding it.
-
-![Claude Code searches Maps on five devices and reports per device](assets/demos/11-claude-code-mcp-v2.gif)
-
-Set it up: `claude mcp add devicely -- npx -y devicely mcp`, or the plugin: `/plugin marketplace add sureshkumarm8/Devicely`. More in [For AI agents](../README.md#for-ai-agents-mcp-server).
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/01-commander.gif" alt="Commander Mode Multi-Device Sync" width="900">
 
 ---
 
-Found something you'd like to see? [Start a discussion](https://github.com/sureshkumarm8/Devicely/discussions) or [try Devicely with me](https://github.com/sureshkumarm8/Devicely/discussions/2).
+### 2. Fleet Settings & Dark Mode Sync
+Toggle system-wide settings, display modes (Light/Dark mode), or preferences across all connected iOS and Android hardware with a single action.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/02-dark-mode.gif" alt="Fleet Dark Mode Toggle" width="900">
+
+---
+
+### 3. Synchronized Multi-Browser Navigation
+Open web URLs across mobile Safari, Chrome, and default browsers simultaneously across all screen form-factors and resolutions.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/03-browser.gif" alt="Multi-Browser Navigation" width="900">
+
+---
+
+### 4. Natural Language & Voice Commands (NLP)
+Type or speak plain English instructions (`"open settings"`, `"launch camera"`, `"scroll down"`). Devicely translates high-level prompts into precise device actions with deterministic waits.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/04-plain-english.gif" alt="Natural Language Voice and AI Commands" width="900">
+
+---
+
+### 5. Fleet App Management (Batch Launch & Kill)
+Launch, switch, or terminate applications across the entire device pool with one click or command.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/05-apps.gif" alt="Fleet App Management" width="900">
+
+---
+
+### 6. Dynamic Commander Leader Swap
+Promote any follower device to become the new commander on the fly without interrupting the active mirroring session.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/06-commander-swap.gif" alt="Dynamic Commander Swap" width="900">
+
+---
+
+### 7. Live Visual Locator Inspector
+Hover over live device screen mirrors to visually inspect UI elements and copy accessibility IDs, resource IDs, XPaths, and coordinates instantly.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/07-hover-inspect.gif" alt="Live Visual Locator Inspector" width="900">
+
+---
+
+### 8. Smart Resilient Locators
+Test robust element locating with Devicely's **Dynamic-First, Coordinate-Fallback** engine that adapts to UI drifts and different device aspect ratios.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/08-locators.gif" alt="Smart Locators" width="900">
+
+---
+
+### 9. No-Code Flows (Record & Replay)
+Record user actions across devices, save them as reproducible **Flows**, and replay them anytime across the fleet or export them to Appium code.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/09-flows.gif" alt="No-Code Flows Record and Replay" width="900">
+
+---
+
+### 10. Virtual Devices (Emulators & Simulators)
+Seamlessly orchestrate iOS Simulators and Android AVDs side-by-side with physical devices.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/10-virtual-devices.gif" alt="Virtual Device Fleet" width="900">
+
+---
+
+### 11. AI Agent Integration (Model Context Protocol - MCP)
+Empower AI agents like Claude Code, Cursor, and VS Code to inspect and drive real devices using Devicely's official 30-tool MCP server.
+
+<img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/demos/11-claude-code-mcp.gif" alt="Claude Code MCP Integration" width="900">
+
+---
+
+[← Back to Main README](../README.md)
+
