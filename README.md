@@ -10,6 +10,7 @@ Control a fleet of real iOS and Android devices from one screen — by hand, in 
 [![npm downloads](https://img.shields.io/npm/dm/devicely?style=for-the-badge&color=CB3837)](https://www.npmjs.com/package/devicely)
 [![Platforms](https://img.shields.io/badge/devices-iOS%20%7C%20iPadOS%20%7C%20Android-lightgrey?style=for-the-badge)](#supported-platforms)
 [![MCP](https://img.shields.io/badge/MCP-30%20tools-8A2BE2?style=for-the-badge)](#for-ai-agents-mcp-server)
+[![mcprush](https://img.shields.io/endpoint?url=https%3A%2F%2Fmcprush.com%2Fbadge%2Fdevicely-mcp%2Fshields.json)](https://mcprush.com/to/devicely-mcp?ref=badge)
 [![License](https://img.shields.io/badge/license-free%20%7C%20closed%20source-blue?style=for-the-badge)](#license)
 
 <img src="https://raw.githubusercontent.com/sureshkumarm8/devicely/main/docs/assets/devicely-at-a-glance.gif" alt="Devicely Features at a Glance: Tap once. Every iPhone, iPad and Android follows." width="900">
