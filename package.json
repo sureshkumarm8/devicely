@@ -1,6 +1,6 @@
 {
   "name": "devicely",
-  "version": "2.4.8",
+  "version": "2.4.10",
   "mcpName": "io.github.sureshkumarm8/devicely",
   "description": "Devicely - One Command, All Devices. AI Powered Mobile Automation for iOS and Android",
   "main": "lib/server.js",
